@@ -5,13 +5,13 @@ languageToggle.addEventListener('click', () => {
     if (currentLang === 'ar') {
         document.documentElement.lang = 'en';
         document.body.style.direction = 'ltr';
-        document.body.style.textAlign = 'center'; // Center content for English
+        document.body.style.textAlign = 'center';
         languageToggle.textContent = 'العربية';
         updateTextContent('en');
     } else {
         document.documentElement.lang = 'ar';
         document.body.style.direction = 'rtl';
-        document.body.style.textAlign = 'center'; // Center content for Arabic
+        document.body.style.textAlign = 'center';
         languageToggle.textContent = 'English';
         updateTextContent('ar');
     }
@@ -30,8 +30,6 @@ function updateTextContent(language) {
         document.getElementById('games-title').textContent = 'Games';
         document.getElementById('game1-title').textContent = 'Game 1 (SOON)';
         document.getElementById('game1-description').textContent = 'SOON';
-        // document.getElementById('game2-title').textContent = 'Game 2';
-        // document.getElementById('game2-description').textContent = 'Short description of Game 2.';
         document.getElementById('footer-text').textContent = '© 2025 KAPATCHINO. All rights reserved.';
     } else {
         document.getElementById('site-title').textContent = 'كاباتشينو';
@@ -45,8 +43,6 @@ function updateTextContent(language) {
         document.getElementById('games-title').textContent = 'الألعاب';
         document.getElementById('game1-title').textContent = 'لعبة 1 (قريبا)';
         document.getElementById('game1-description').textContent = 'قريبا';
-        // document.getElementById('game2-title').textContent = 'لعبة 2';
-        // document.getElementById('game2-description').textContent = 'وصف قصير للعبة 2.';
         document.getElementById('footer-text').textContent = '© 2025 كاباتشينو. جميع الحقوق محفوظة.';
     }
 }
@@ -59,10 +55,17 @@ burgerMenu.addEventListener('click', () => {
     navList.classList.toggle('show');
 });
 
-// Go to Top Button
+// Close Navbar on Click Outside (for Mobile)
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('nav') && !event.target.closest('.burger-menu')) {
+        navList.classList.remove('show');
+    }
+});
+
+// Smooth Scroll to Top
 const toTopBtn = document.getElementById('toTopBtn');
 
-globalThis.onscroll = function() {
+window.onscroll = function() {
     scrollFunction();
 };
 
@@ -75,13 +78,8 @@ function scrollFunction() {
 }
 
 toTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
-
-// Home button scroll to top
-document.getElementById('nav-home').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll animation
+    });
 });
