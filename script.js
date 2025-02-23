@@ -57,7 +57,8 @@ burgerMenu.addEventListener('click', () => {
 
 // Close Navbar on Click Outside (for Mobile)
 document.addEventListener('click', (event) => {
-    if (!event.target.closest('nav') && !event.target.closest('.burger-menu')) {
+    const isClickInsideNav = navList.contains(event.target) || burgerMenu.contains(event.target);
+    if (!isClickInsideNav) {
         navList.classList.remove('show');
     }
 });
