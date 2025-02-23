@@ -62,7 +62,7 @@ burgerMenu.addEventListener('click', () => {
 // Go to Top Button
 const toTopBtn = document.getElementById('toTopBtn');
 
-window.onscroll = function() {
+globalThis.onscroll = function() {
     scrollFunction();
 };
 
