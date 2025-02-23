@@ -71,17 +71,18 @@ nav ul li a:hover, nav ul li button:hover {
     font-size: 1.5rem;
 }
 
-/* Hero Section */
 .hero-section {
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: url('hero-background.jpg') no-repeat center center/contain; /* Use 'contain' to fit the image */
     color: #ffffff;
     text-align: center;
-    padding: 150px 20px;
-    margin-top: 70px;
-    height: 60vh;
+    padding: 100px 20px; /* Adjusted padding */
+    margin-top: 70px; /* Adjusted for navbar height */
+    height: 400px; /* Set a fixed height for the hero section */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+    background-blend-mode: overlay; /* Blend the background image with the overlay */
 }
 
 .hero-section h2 {
@@ -98,7 +99,6 @@ nav ul li a:hover, nav ul li button:hover {
     padding: 10px 20px;
     border-radius: 10px;
 }
-
 /* Sections */
 section {
     padding: 100px 0;
