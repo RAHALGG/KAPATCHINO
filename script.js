@@ -28,8 +28,10 @@ function updateTextContent(language) {
         document.getElementById('about-title').textContent = 'About Us';
         document.getElementById('about-description').textContent = 'We are an Arabian Syerian independent game studio aiming to create innovative and engaging games.';
         document.getElementById('games-title').textContent = 'Games';
-        document.getElementById('game1-title').textContent = 'Game 1 (SOON)';
-        document.getElementById('game1-description').textContent = 'SOON';
+        document.getElementById('text-game-ar').textContent = 'Doll Journey: Something Lost';
+        document.getElementById('txt-game-ar').textContent = 'A (Souls Like) game but with an Arabian touch and an Arabian world with a stunning story and advanced combat system and unique level design';
+        document.getElementById('lnk1-game-ar').textContent = 'Play the game';
+        document.getElementById('lnk2-game-ar').textContent = 'Watch the Trailer';
         document.getElementById('footer-text').textContent = '© 2025 KAPATCHINO. All rights reserved.';
     } else {
         document.getElementById('site-title').textContent = 'كاباتشينو';
@@ -41,8 +43,10 @@ function updateTextContent(language) {
         document.getElementById('about-title').textContent = 'من نحن';
         document.getElementById('about-description').textContent = 'نحن استوديو ألعاب عربي سوري مستقل يهدف إلى إنشاء ألعاب مبتكرة وجذابة.';
         document.getElementById('games-title').textContent = 'الألعاب';
-        document.getElementById('game1-title').textContent = 'لعبة 1 (قريبا)';
-        document.getElementById('game1-description').textContent = 'قريبا';
+        document.getElementById('text-game-ar').textContent = 'رحلة دمية : شيء مفقود';
+        document.getElementById('txt-game-ar').textContent = 'لعبة (Souls Like) ولكن مع لمسة عربية وعالم عربي مع قصة مذهلة ونظام قتال متقدم وتصميم مستويات فريد';
+        document.getElementById('lnk1-game-ar').textContent = 'تجربة اللعبة';
+        document.getElementById('lnk2-game-ar').textContent = 'عرض الفيديو';
         document.getElementById('footer-text').textContent = '© 2025 كاباتشينو. جميع الحقوق محفوظة.';
     }
 }
