@@ -1,3 +1,28 @@
+// Add this button to your HTML navbar
+<button id="theme-toggle"><i class="fas fa-moon"></i></button>
+
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    themeToggle.innerHTML = document.body.classList.contains('light-theme') ? 
+        '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+});
+
+// Add to CSS
+.light-theme {
+    background-color: #f0f0f0;
+    color: #1e1e2f;
+}
+
+.light-theme header {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1e1e2f;
+}
+
+.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.9);
+}
 // Language Toggle
 const languageToggle = document.getElementById('language-toggle');
 languageToggle.addEventListener('click', () => {
