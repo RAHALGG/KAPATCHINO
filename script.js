@@ -88,3 +88,73 @@ toTopBtn.addEventListener('click', () => {
         behavior: 'smooth' // Smooth scroll animation
     });
 });
+// 3D Scene Initialization
+function init3DScene() {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('3d-container').appendChild(renderer.domElement);
+
+    // Add floating particles
+    const particles = new THREE.BufferGeometry();
+    const particleCount = 5000;
+    const posArray = new Float32Array(particleCount * 3);
+
+    for(let i = 0; i < particleCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 5;
+    }
+
+    particles.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const material = new THREE.PointsMaterial({
+        size: 0.005,
+        color: '#ff6b6b'
+    });
+    const particleMesh = new THREE.Points(particles, material);
+    scene.add(particleMesh);
+
+    camera.position.z = 2;
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        particleMesh.rotation.y += 0.001;
+        renderer.render(scene, camera);
+    }
+    animate();
+}
+
+// Initialize 3D scene when page loads
+window.addEventListener('load', init3DScene);
+
+// Add GSAP animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate project cards on scroll
+gsap.utils.toArray('.project-card').forEach(card => {
+    gsap.from(card, {
+        scrollTrigger: {
+            trigger: card,
+            start: 'top center'
+        },
+        opacity: 0,
+        y: 100,
+        duration: 1
+    });
+});
+
+// Add hover effect to social icons
+document.querySelectorAll('.social-icons a').forEach(icon => {
+    icon.addEventListener('mouseenter', () => {
+        gsap.to(icon, {
+            y: -10,
+            duration: 0.3
+        });
+    });
+    icon.addEventListener('mouseleave', () => {
+        gsap.to(icon, {
+            y: 0,
+            duration: 0.3
+        });
+    });
+});
