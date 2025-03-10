@@ -3,16 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>استوديو كاباتشينو للألعاب</title>
-    
-    <!-- مكتبات خارجية -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- ملفات التنسيق -->
+    <title>KAPATCHINO GAME STUDIO</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image" href="assets/hero-background.jpg">
+    <link rel="website icon" type="image" href="hero-background.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -26,7 +19,6 @@
                     <li><a href="#about" id="nav-about">من نحن</a></li>
                     <li><a href="#games" id="nav-games">الألعاب</a></li>
                     <li><button id="language-toggle">English</button></li>
-                    <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
                 </ul>
                 <div class="burger-menu" id="burger-menu">
                     <i class="fas fa-bars"></i>
@@ -36,45 +28,51 @@
     </header>
 
     <section id="home" class="hero-section">
-        <div id="3d-container"></div>
-        <div class="container hero-content">
-            <h2 id="hero-title">مرحبًا بكم في عالم الألعاب المبتكر</h2>
-            <p id="hero-description">إبداع عربي يلامس حدود الخيال</p>
+        <div class="container">
+            <h2 id="hero-title">مرحبًا بكم في استوديو كاباتشينو للألعاب المستقلة</h2>
+            <p id="hero-description">نحن نصنع الألعاب بأفضل التصاميم وأروع الأساليب.</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2 id="about-title">من نحن</h2>
-            <p id="about-description">استوديو سوري مستقل نصنع تجارب لعب لا تُنسى</p>
+            <p id="about-description">نحن استوديو ألعاب عربي سوري مستقل يهدف إلى إنشاء ألعاب مبتكرة وجذابة.</p>
         </div>
     </section>
 
     <section id="games">
         <div class="container">
-            <h2 id="games-title">إبداعاتنا</h2>
-            <div class="project-card">
-                <img src="assets/game-banner.jpg" alt="مشروعنا الأول">
-                <div class="project-content">
-                    <h3>رحلة الدمية المفقودة</h3>
-                    <p>مغامرة ملحمية بلمسة شرق أوسطية</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-download"></i> تنزيل التجربة</a>
-                        <a href="#"><i class="fas fa-trailer"></i> المشاهدة</a>
-                    </div>
+            <h2 id="games-title">الألعاب</h2>
+        <div class="project-card">
+            <img src="Blue Neon Futuristic Game Streaming Twitch Banner.png" alt="Project 1">
+            <div class="project-content">
+                <h3 id="text-game-ar" class="lang-ar">رحلة دمية : شيء مفقود</h3>
+                <p id="txt-game-ar" class="lang-ar">لعبة (Souls Like) ولكن مع لمسة عربية وعالم عربي مع قصة مذهلة ونظام قتال متقدم وتصميم مستويات فريد</p>
+                <div class="project-links">
+                    <a href="#" id="lnk1-game-ar" class="lang-ar"><i class="fas fa-gamepad"></i> تجربة اللعبة</a>
+                    <a href="#" id="lnk2-game-ar" class="lang-ar"><i class="fas fa-film"></i> عرض الفيديو</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p id="footer-text">© 2025 جميع الحقوق محفوظة</p>
-            <div class="social-icons">
-                <!-- روابط التواصل الاجتماعي -->
-            </div>
+  <footer>
+    <div class="container">
+        <p id="footer-text">&copy; 2025 كاباتشينو. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://youtube.com/@kapatchino_games" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/kapatchino_game" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/kapatchino._.game" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://kapatchino-game.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
+            <a href="https://bsky.app/profile/kapatchino-game.bsky.social" target="_blank"><i class="fas fa-cloud"></i></a>
+            <a href="https://github.com/RAHALGG" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-    </footer>
+    </div>
+</footer>
+
+    <button id="toTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>

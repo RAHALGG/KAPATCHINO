@@ -1,23 +1,4 @@
 /* General Styles */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 50% 50%, #ff6b6b10 0%, transparent 30%);
-    pointer-events: none;
-    z-index: -1;
-    animation: pulse 8s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
 body {
     font-family: 'Tajawal', sans-serif;
     margin: 0;
@@ -101,29 +82,20 @@ nav ul li a:hover, nav ul li button:hover {
 
 /* Hero Section with Animations */
 .hero-section {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    margin-top: 0;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 150px 20px;
+    margin-top: 100px; /* Adjusted for navbar height */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-blend-mode: overlay; /* Blend image with overlay */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
 }
 
-#3d-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-    background: rgba(30, 30, 47, 0.7);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -247,46 +219,6 @@ footer {
 }
 
 /* Project Card Styles - Move outside of media query */
-.project-card {
-    position: relative;
-    overflow: hidden;
-    transform-style: preserve-3d;
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff6b6b55, #4ecdc455);
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1;
-}
-
-.project-card:hover::before {
-    opacity: 1;
-}
-
-.project-card::after {
-    content: '';
-    position: absolute;
-    bottom: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, #ffffff22 0%, transparent 70%);
-    transform: rotate(45deg);
-    transition: all 0.5s;
-}
-
-.project-card:hover::after {
-    bottom: -30%;
-    left: -30%;
-}
-
 .project-card {
     background: rgba(30, 30, 47, 0.9);
     border-radius: 10px;
