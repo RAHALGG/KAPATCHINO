@@ -82,7 +82,7 @@ nav ul li a:hover, nav ul li button:hover {
 
 /* Hero Section with Animations */
 .hero-section {
-    background: url('hero-background.png') no-repeat center center/cover;
+    background: url('hero_background.png') no-repeat center center/cover;
     color: #ffffff;
     text-align: center;
     padding: 150px 20px;
